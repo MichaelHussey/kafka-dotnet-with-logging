@@ -6,14 +6,15 @@ Based on this sample from the Confluent Kafka .NET - https://github.com/confluen
 
 Build the program
 
-`docker build -t kafakdotnet .`
+`docker build -t kafakdotnetwithlogging .`
 
 Run the program
-`docker run -it --rm --name kdn kafakdotnet`
+
+`docker run -it --rm --name kdn kafakdotnetwithlogging`
 
 ## How it works
 
-The "Debug" property in the consumer and producer property sets is passed through to the underlying librdkafka library. This should contain a list of possible logging items/events that is understood by librdkafka. For a full list of possible values see https://github.com/confluentinc/librdkafka/blob/master/INTRODUCTION.md#debug-contexts
+The "Debug" property in the consumer and producer property sets (in `appsettings.json`) is passed through to the underlying librdkafka library. This should contain a list of possible logging items/events that is understood by librdkafka. For a full list of possible values see [debug-contexts](https://github.com/confluentinc/librdkafka/blob/master/INTRODUCTION.md#debug-contexts)
 
-Confluent Support portal also has a useful Knowledge Base article:  https://support.confluent.io/hc/en-us/articles/19562024268052-How-to-set-up-logging-in-librdkafka-C-NET
+Confluent Support portal also has a useful [Knowledge Base article](https://support.confluent.io/hc/en-us/articles/19562024268052-How-to-set-up-logging-in-librdkafka-C-NET)
 
